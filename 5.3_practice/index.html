@@ -1,0 +1,59 @@
+<!--這次我們要時做的是取得最後三個字元。
+
+取得最後三個字元 getLastCharacter() 函式
+4) 預期 Color 的最後三個字元為 lor
+5) 預期 Pencil 的最後一個字元為 cil
+6) 預期 Monday 的最後一個字元為 day-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3_JS_Practicing</title>
+    <link rel="stylesheet" href="style.css">
+    <!------bootstrap 4------>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="items">
+            <h3>輸入字串得到最後三個字元</h3>
+            <div class="input-group mb-12">
+                <input id="input" type="text" class="form-control" placeholder="input some words..."
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button id="button" class="btn btn-outline-secondary" type="button"
+                        onclick="getLastThreeCharacter()">點一下</button>
+                </div>
+            </div>
+            <div id="ans"></div>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        function getLastThreeCharacter() {
+            let input = document.getElementById('input').value;
+            let inputLength = input.length;
+            let lastThreeWords = input.charAt(inputLength - 3) + input.charAt(inputLength - 2) + input.charAt(
+                inputLength - 1);
+            document.getElementById('ans').innerHTML = '最後三個字元是: ' + lastThreeWords;
+        }
+    </script>
+    <!---bootstrap 4 js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
