@@ -1,0 +1,60 @@
+<!--我們這次不要使用跑測試的方式，而是開一個 HTML 檔案 index.html 並引入 JS，接下來撰寫 getLastCharacter() 並呼叫他。
+
+並將下列三個參數情景帶入：
+
+問題描述：取得最後一個字元 getLastCharacter() 函式
+1) 預期 Pen 的最後一個字元為 n
+2) 預期 Pencil 的最後一個字元為 l
+3) 預期 Monday 的最後一個字元為 y-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2_JS_Practicing</title>
+    <link rel="stylesheet" href="style.css">
+    <!------bootstrap 4------>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="items">
+            <div class="h3">輸入字串即可得到最後一個字元</div>
+            <div class="input-group mb-12">
+                <input id="input" type="text" class="form-control" placeholder="input some words..."
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button id="button" class="btn btn-outline-secondary" type="button"
+                        onclick="showString()">點一下</button>
+                </div>
+            </div>
+            <div id="ans"></div>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        function showString() {
+            let input = document.getElementById('input').value;
+            let inputLength = input.length;
+            let lastWord = input.charAt(inputLength - 1);
+            document.getElementById('ans').innerHTML = '最後一個字元是: ' + lastWord;
+        }
+    </script>
+    <!---bootstrap 4 js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
