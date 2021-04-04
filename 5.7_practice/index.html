@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.7_practice</title>
+</head>
+
+<body>
+    <!-- JS裡面星號用for循環輸出 -->
+    <!-- 空格使用html裡的&nbsp解決 -->
+    <!-- 空格個數要使用單一變量解決 -->
+    <script>
+        let n = 5
+
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= (n - i); j++) {
+                document.write('&nbsp')
+            }
+            for (let k = 1; k <= (2 * i) - 1; k++) {
+                document.write("*");
+            }
+            document.write('<br/>')
+
+        }
+        for (let x = 1; x <= n; x++) {
+            for (let y = 1; y <= (x); y++) {
+                document.write('&nbsp')
+            }
+            for (let z = 1; z <= 2 * (n - x) - 1; z++) {
+
+                document.write("*");
+            }
+            document.write('<br/>')
+
+        }
+    </script>
+</body>
+
+</html>
